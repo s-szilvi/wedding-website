@@ -109,28 +109,57 @@ p{
     margin: 1em;
     text-align: center;
 }
-.questions-answers {
+.faq {
     background: hsla(100,0%,0%,.6);
     color: #d2ba87;
-    width: 100%;
+    width: 100vw;
+    text-align: center;
+  }
+  
+  .faq h2 {
+    margin-top: 1rem;
+  }
+  
+  .faq p {
     text-align: left;
-}
-.question-group{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-}
-.question {
-font-weight: bold;
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-.answer {
+  }
+  
+  .question-group::after {
+    content: "";
+    display: block;
+    height: .1875rem;
+    width: 50vw;
+    margin: 1.5rem auto;
+    background-color: #d2ba87;
+  }
+  
+  .question {
+    font-weight: 700;
+    margin-bottom: .5rem;
+  }
+  
+  .answer {
     margin-bottom: 1.5rem;
-    text-align: left;
-}
+  }
+  @media (min-width: 768px) {
+
+    .question-group {
+      display: inline-block;
+      width: 30%;
+      vertical-align: top;
+      padding: 0.5rem;
+      margin: .5rem;
+    }
+  
+    .question-group::after {
+      display: none;
+    }
+  
+    .question-group h3 {
+      text-align: center;
+    }
+  
+  }
 p {
     display: block;
     margin-block-start: 1em;
@@ -162,3 +191,10 @@ footer {
     text-align: center;
     font-size: .875rem;
 }
+.cell img {
+    height: 7.5rem;
+  }
+
+.gifts img{
+        height: 7.5rem;
+      }
